@@ -1,0 +1,463 @@
+databaseChangeLog:
+- changeSet:
+    id: 1770063245634-1
+    author: root (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: created_at
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: end_time
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: start_time
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: client_id
+            type: UUID
+        - column:
+            constraints:
+              nullable: false
+            name: creator_id
+            type: UUID
+        - column:
+            constraints:
+              nullable: false
+            name: employee_id
+            type: UUID
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: appointments_pkey
+            name: id
+            type: UUID
+        - column:
+            constraints:
+              nullable: false
+            name: service_id
+            type: UUID
+        - column:
+            constraints:
+              nullable: false
+            name: tenant_id
+            type: UUID
+        - column:
+            constraints:
+              nullable: false
+            name: status
+            type: VARCHAR(255)
+        tableName: appointments
+- changeSet:
+    id: 1770063245634-2
+    author: root (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: duraction
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: end_time
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: start_time
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: employee_id
+            type: UUID
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: employee_schedule_pkey
+            name: id
+            type: UUID
+        - column:
+            constraints:
+              nullable: false
+            name: day_of_week
+            type: VARCHAR(255)
+        tableName: employee_schedule
+- changeSet:
+    id: 1770063245634-3
+    author: root (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: created_at
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: staffs_pkey
+            name: id
+            type: UUID
+        - column:
+            constraints:
+              nullable: false
+            name: tenant_id
+            type: UUID
+        - column:
+            constraints:
+              nullable: false
+            name: email
+            type: VARCHAR(255)
+        - column:
+            constraints:
+              nullable: false
+            name: login
+            type: VARCHAR(255)
+        - column:
+            constraints:
+              nullable: false
+            name: password
+            type: VARCHAR(255)
+        - column:
+            constraints:
+              nullable: false
+            name: role
+            type: VARCHAR(255)
+        tableName: staffs
+- changeSet:
+    id: 1770063245634-4
+    author: root (generated)
+    changes:
+    - addUniqueConstraint:
+        columnNames: client_id
+        constraintName: appointments_client_id_key
+        tableName: appointments
+- changeSet:
+    id: 1770063245634-5
+    author: root (generated)
+    changes:
+    - addUniqueConstraint:
+        columnNames: employee_id
+        constraintName: appointments_employee_id_key
+        tableName: appointments
+- changeSet:
+    id: 1770063245634-6
+    author: root (generated)
+    changes:
+    - addUniqueConstraint:
+        columnNames: service_id
+        constraintName: appointments_service_id_key
+        tableName: appointments
+- changeSet:
+    id: 1770063245634-7
+    author: root (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: created_at
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: clients_pkey
+            name: id
+            type: UUID
+        - column:
+            constraints:
+              nullable: false
+            name: tenant_id
+            type: UUID
+        - column:
+            constraints:
+              nullable: false
+            name: email
+            type: VARCHAR(255)
+        - column:
+            constraints:
+              nullable: false
+            name: login
+            type: VARCHAR(255)
+        - column:
+            constraints:
+              nullable: false
+            name: password
+            type: VARCHAR(255)
+        - column:
+            constraints:
+              nullable: false
+            name: phone
+            type: VARCHAR(255)
+        tableName: clients
+- changeSet:
+    id: 1770063245634-8
+    author: root (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: created_at
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: employee_roles_pkey
+            name: id
+            type: UUID
+        - column:
+            constraints:
+              nullable: false
+            name: tenant_id
+            type: UUID
+        - column:
+            constraints:
+              nullable: false
+            name: name
+            type: VARCHAR(255)
+        tableName: employee_roles
+- changeSet:
+    id: 1770063245634-9
+    author: root (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: created_at
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: employees_pkey
+            name: id
+            type: UUID
+        - column:
+            constraints:
+              nullable: false
+            name: role_id
+            type: UUID
+        - column:
+            constraints:
+              nullable: false
+            name: tenant_id
+            type: UUID
+        - column:
+            constraints:
+              nullable: false
+            name: login
+            type: VARCHAR(255)
+        - column:
+            constraints:
+              nullable: false
+            name: password
+            type: VARCHAR(255)
+        - column:
+            constraints:
+              nullable: false
+            name: phone
+            type: VARCHAR(255)
+        tableName: employees
+- changeSet:
+    id: 1770063245634-10
+    author: root (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: created_at
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: role_service_pkey
+            name: id
+            type: UUID
+        - column:
+            constraints:
+              nullable: false
+            name: role_id
+            type: UUID
+        - column:
+            constraints:
+              nullable: false
+            name: service_id
+            type: UUID
+        - column:
+            constraints:
+              nullable: false
+            name: tenant_id
+            type: UUID
+        tableName: role_service
+- changeSet:
+    id: 1770063245634-11
+    author: root (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: duraction
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: price
+            type: numeric(38, 2)
+        - column:
+            constraints:
+              nullable: false
+            name: created_at
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: services_pkey
+            name: id
+            type: UUID
+        - column:
+            constraints:
+              nullable: false
+            name: tenant_id
+            type: UUID
+        - column:
+            constraints:
+              nullable: false
+            name: name
+            type: VARCHAR(255)
+        tableName: services
+- changeSet:
+    id: 1770063245634-12
+    author: root (generated)
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: role_id
+        baseTableName: employees
+        constraintName: fk3xq9mat9uci5aen8he29us6uj
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: NO ACTION
+        onUpdate: NO ACTION
+        referencedColumnNames: id
+        referencedTableName: employee_roles
+        validate: true
+- changeSet:
+    id: 1770063245634-13
+    author: root (generated)
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: service_id
+        baseTableName: appointments
+        constraintName: fk5iltr7k9pows18hk8nc101vc1
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: NO ACTION
+        onUpdate: NO ACTION
+        referencedColumnNames: id
+        referencedTableName: services
+        validate: true
+- changeSet:
+    id: 1770063245634-14
+    author: root (generated)
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: employee_id
+        baseTableName: employee_schedule
+        constraintName: fk8mg193kvii4bh06cocaa0pbi2
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: NO ACTION
+        onUpdate: NO ACTION
+        referencedColumnNames: id
+        referencedTableName: employees
+        validate: true
+- changeSet:
+    id: 1770063245634-15
+    author: root (generated)
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: client_id
+        baseTableName: appointments
+        constraintName: fkfbl6cciquyyvv5s1e31qmflkb
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: NO ACTION
+        onUpdate: NO ACTION
+        referencedColumnNames: id
+        referencedTableName: clients
+        validate: true
+- changeSet:
+    id: 1770063245634-16
+    author: root (generated)
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: service_id
+        baseTableName: role_service
+        constraintName: fkl0cnogtdpuyrv291jst1j0dar
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: NO ACTION
+        onUpdate: NO ACTION
+        referencedColumnNames: id
+        referencedTableName: services
+        validate: true
+- changeSet:
+    id: 1770063245634-17
+    author: root (generated)
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: employee_id
+        baseTableName: appointments
+        constraintName: fkn9hov7hdkmkdpveiujpmq4sgh
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: NO ACTION
+        onUpdate: NO ACTION
+        referencedColumnNames: id
+        referencedTableName: employees
+        validate: true
+- changeSet:
+    id: 1770063245634-18
+    author: root (generated)
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: role_id
+        baseTableName: role_service
+        constraintName: fkp3jgam1vgpm8nuj73oxy070lh
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: NO ACTION
+        onUpdate: NO ACTION
+        referencedColumnNames: id
+        referencedTableName: employee_roles
+        validate: true
+

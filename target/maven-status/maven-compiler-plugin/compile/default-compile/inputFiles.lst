@@ -1,1 +1,12 @@
-/Users/maslyak/IdeaProjects/CUMA_customary/src/main/java/com/example/cuma_customary/CumaCustomaryApplication.java
+/Users/maslyak/IdeaProjects/CUMA_customary/src/main/java/CumaCustomaryApplication.java
+/Users/maslyak/IdeaProjects/CUMA_customary/src/main/java/config/HibernateConfig.java
+/Users/maslyak/IdeaProjects/CUMA_customary/src/main/java/entity/AppointmentsTable.java
+/Users/maslyak/IdeaProjects/CUMA_customary/src/main/java/entity/ClientsTable.java
+/Users/maslyak/IdeaProjects/CUMA_customary/src/main/java/entity/EmployeeRolesTable.java
+/Users/maslyak/IdeaProjects/CUMA_customary/src/main/java/entity/EmployeeScheduleTable.java
+/Users/maslyak/IdeaProjects/CUMA_customary/src/main/java/entity/EmployeesTable.java
+/Users/maslyak/IdeaProjects/CUMA_customary/src/main/java/entity/RoleServiceTable.java
+/Users/maslyak/IdeaProjects/CUMA_customary/src/main/java/entity/ServicesTable.java
+/Users/maslyak/IdeaProjects/CUMA_customary/src/main/java/entity/StaffsTable.java
+/Users/maslyak/IdeaProjects/CUMA_customary/src/main/java/enums/AppointmentsStatus.java
+/Users/maslyak/IdeaProjects/CUMA_customary/src/main/java/enums/StaffsRole.java

@@ -1,1 +1,12 @@
-com/example/cuma_customary/CumaCustomaryApplication.class
+config/HibernateConfig.class
+entity/RoleServiceTable.class
+enums/AppointmentsStatus.class
+enums/StaffsRole.class
+entity/EmployeeRolesTable.class
+entity/ServicesTable.class
+entity/EmployeesTable.class
+entity/AppointmentsTable.class
+entity/StaffsTable.class
+entity/ClientsTable.class
+entity/EmployeeScheduleTable.class
+CumaCustomaryApplication.class
